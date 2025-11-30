@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Create the addTask Function
     function addTask() {
-        // Get and trim input value
+        // Retrieve and trim user input
         const taskText = taskInput.value.trim();
 
-        // Check if empty
+        // Check for empty input
         if (taskText === "") {
             alert("Please enter a task.");
             return;
@@ -26,15 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
         removeBtn.textContent = "Remove";
         removeBtn.className = 'remove-btn';
 
-        // Remove Functionality
+        // Remove Task When Button is Clicked
         removeBtn.onclick = function () {
             taskList.removeChild(li);
         };
 
-        // Append button to list item
+        // Add button to li, then add li to list
         li.appendChild(removeBtn);
-
-        // Append list item to task list
         taskList.appendChild(li);
 
         // Clear input field
@@ -50,6 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Invoke addTask on DOMContentLoaded (as required)
+    // Invoke addTask on DOMContentLoaded (as stated)
     addTask();
 });
