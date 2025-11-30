@@ -1,7 +1,6 @@
-// Run the script after the page has fully loaded
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Select DOM Elements (updated to match your HTML)
+    // Select DOM Elements
     const addButton = document.getElementById('add-task-btn');
     const taskInput = document.getElementById('task-input');
     const taskList = document.getElementById('task-list');
@@ -24,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Create Remove button
         const removeBtn = document.createElement('button');
         removeBtn.textContent = "Remove";
-        removeBtn.className = 'remove-btn';
+
+        // REQUIRED: use classList.add
+        removeBtn.classList.add('remove-btn');
 
         // When Remove is clicked, delete this task
         removeBtn.onclick = function () {
